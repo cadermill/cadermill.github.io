@@ -13,7 +13,7 @@ export default defineConfig({
     tailwindcss(),
     svgr()
   ],
-  base: '/Portfolio-Website/',
+  base: '/',
   server: {
     watch: {
       usePolling: true,
