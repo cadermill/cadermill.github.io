@@ -20,19 +20,19 @@ export default function Home() {
           
           <CategoryCard
             title="3D Modeling"
-            image="/p123/ProjectsMedia/Wodger/front.jpg"
+            image="/ProjectsMedia/Wodger/front.jpg"
             category="3D Modeling"
           />
 
           <CategoryCard
             title="Graphic Design"
-            image="/p123/ProjectsMedia/Broadsheet/Scranton-Times-Broadsheet.jpg"
+            image="/ProjectsMedia/Broadsheet/Scranton-Times-Broadsheet.jpg"
             category="Graphic Design"
           />
 
           <CategoryCard
             title="Game Development"
-            image="/p123/ProjectsMedia/placeholder.jpg"
+            image="/ProjectsMedia/placeholder.jpg"
             category="Game Development"
           />
 

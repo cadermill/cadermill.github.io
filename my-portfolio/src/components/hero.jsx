@@ -16,7 +16,7 @@ export default function Hero() {
         loop
         playsInline
       >
-        <source src="/p123/HeroVids/CelPingPong.mp4" type="video/mp4" />
+        <source src="/HeroVids/CelPingPong.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}

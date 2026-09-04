@@ -8,7 +8,7 @@ export default function About() {
         {/* Image */}
         <div className="flex justify-center">
           <img
-            src="/p123/me.jpg"
+            src="/me.jpg"
             alt="Caden"
             className="
                 w-full max-w-sm md:max-w-md

@@ -9,7 +9,7 @@ export default function ProjectCard({ project }) {
   const image =
     hovered && project.coverGif
       ? project.coverGif
-      : project.coverImg || "/p123/ProjectsMedia/placeholder.jpg";
+      : project.coverImg || "/ProjectsMedia/placeholder.jpg";
 
   return (
     <div
