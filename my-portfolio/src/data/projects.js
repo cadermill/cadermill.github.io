@@ -7,7 +7,7 @@ const projects = [
     videos: ["/ProjectsMedia/CelShader/CelShowcase.mp4", "/ProjectsMedia/CelShader/TechnicalShowcase.mp4"],
     description: "A custom cel shader written in HLSL in Unity's ShaderLab for the Universal Render Pipeline.",
     link: "https://github.com/cadermill/Shaders",
-    coverImg: null,
+    coverImg: "/ProjectsMedia/CelShader/CelShaderCoverImg.PNG",
     coverGif: null
   },
   {
@@ -68,6 +68,16 @@ const projects = [
     videos: null,
     description: "A collection of information graphics created for an art class. Tools used include Adobe Illustrator and RStudio.",
     coverImg: "/ProjectsMedia/InfoGraphics/Top Netflix Movies.png",
+    coverGif: null
+  },
+  {
+    title: "Unity URP Digital Impressionism Shader",
+    category: "Game Development",
+    skills: ["Unity", "HLSL", "ShaderLab"],
+    images: null,
+    videos: ["/ProjectsMedia/DigitalImpressionism/DigitalImpressionismTechnicalShowcase.mp4"],
+    description: "The following showcases two shaders I have written in an effort to create a sort of “digital impressionism.” While different from my original goal, I believe to have created an aesthetically pleasing voronoi-based procedural shader suitable for various stylized applications.",
+    coverImg: "/ProjectsMedia/DigitalImpressionism/DigitalImpressionismCoverImg.PNG",
     coverGif: null
   }
 ];
