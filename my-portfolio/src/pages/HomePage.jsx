@@ -1,12 +1,9 @@
-import projects from "../data/projects.js";
 import Hero from "../components/Hero.jsx";
 import CategoryCard from "../components/CategoryCard.jsx";
 import About from "../components/About.jsx";
 import { colors } from "../design-system/tokens/colors.js";
 
 export default function Home() {
-  const categories = ["modeling", "design", "game"];
-
   return (
     <>
       <Hero />
@@ -19,21 +16,21 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           
           <CategoryCard
-            title="3D Modeling"
+            title="Digital Design"
             image="/ProjectsMedia/OfficeSpace/OfficeSpace.jpg"
-            category="3D Modeling"
+            category="Digital Design"
           />
 
           <CategoryCard
-            title="Graphic Design"
-            image="/ProjectsMedia/InfoGraphics/Top Netflix Movies.png"
-            category="Graphic Design"
-          />
-
-          <CategoryCard
-            title="Game Development"
+            title="Technical Art"
             image="/ProjectsMedia/DigitalImpressionism/DigitalImpressionismCoverImg.PNG"
-            category="Game Development"
+            category="Technical Art"
+          />
+
+          <CategoryCard
+            title="Software Development"
+            image="/ProjectsMedia/PortfolioWebsite/PortfolioWebsiteCoverImg2.webp"
+            category="Software Development"
           />
 
         </div>
