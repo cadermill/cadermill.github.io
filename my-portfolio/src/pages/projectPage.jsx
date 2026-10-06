@@ -8,6 +8,14 @@ export default function ProjectPage() {
   const project = projects.find((p) => p.title === title);
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const projectLinks = project?.links
+    ? typeof project.links.url === "string" && typeof project.links.label === "string"
+      ? [project.links]
+      : Object.entries(project.links).map(([label, url]) => ({ label, url }))
+    : project?.link
+      ? [{ label: "See More", url: project.link }]
+      : [];
+
   if (!project) {
     return (
       <div className={`min-h-screen ${colors.bg.base} ${colors.text.primary} flex items-center justify-center px-6`}>
@@ -30,14 +38,16 @@ export default function ProjectPage() {
           {project.description}
         </p>
 
-        {/* Link */}
-        {project.link && (
-          <div className="mb-10">
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noreferrer"
-              className={`
+        {/* Links */}
+        {projectLinks.length > 0 && (
+          <div className="mb-10 flex flex-wrap gap-3">
+            {projectLinks.map(({ label, url }) => (
+              <a
+                key={`${label}-${url}`}
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                className={`
                 inline-block
                 px-5 py-2 rounded-full border
 
@@ -50,9 +60,46 @@ export default function ProjectPage() {
                 transition
                 cursor-pointer
               `}
-            >
-              See More ↗
-            </a>
+              >
+                {label} ↗
+              </a>
+            ))}
+          </div>
+        )}
+
+        {project.mainMedias?.length > 0 && (
+          <div className="mb-10 space-y-6">
+            {project.mainMedias.map((media, i) => (
+              <div
+                key={`${media.type}-${media.src}`}
+                className="w-full overflow-hidden rounded-xl bg-neutral-950"
+              >
+                {media.type === "video" ? (
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full max-h-[80vh] object-contain"
+                  >
+                    <source src={media.src} />
+                  </video>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setSelectedImage(media.src)}
+                    aria-label={`View ${project.title} image ${i + 1} full screen`}
+                    className="block w-full cursor-pointer"
+                  >
+                    <img
+                      src={media.src}
+                      alt={`${project.title} Main ${i}`}
+                      loading="lazy"
+                      className="w-full max-h-[80vh] object-contain"
+                    />
+                  </button>
+                )}
+              </div>
+            ))}
           </div>
         )}
 
