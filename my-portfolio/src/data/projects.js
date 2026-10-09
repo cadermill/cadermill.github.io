@@ -55,10 +55,18 @@ const projects = [
     skills: ["Unity", "HLSL", "ShaderLab"],
     images: null,
     videos: ["/ProjectsMedia/DigitalImpressionism/DigitalImpressionismTechnicalShowcase.mp4"],
-    description: "The following showcases two shaders I have written in an effort to create a sort of “digital impressionism.” While different from my original goal, I believe to have created an aesthetically pleasing voronoi-based procedural shader suitable for various stylized applications.",
+    description: "This project showcases a procedural Voronoi shader I developed to explore a digital impressionist aesthetic. Though it evolved beyond my original concept, the result is a distinctive effect suited to a range of stylized applications.",
     coverImg: "/ProjectsMedia/DigitalImpressionism/DigitalImpressionismCoverImg.PNG",
     coverGif: null,
     links: { "View on GitHub": "https://github.com/cadermill/Shaders/tree/main/Assets/Shaders/DigitalImpressionism"}
+  },
+  {
+    title: "Unity URP Outlines Shader",
+    category: "Technical Art",
+    skills: ["Unity", "HLSL", "Shader Graph"],
+    description: "A custom fullscreen shader that generates outlines around objects based on depth and normal information.",
+    coverImg: "/ProjectsMedia/Outlines/outlinesCoverImg.PNG",
+    images: ["/ProjectsMedia/Outlines/outlinesCoverImg.PNG"]
   },
   {
     title: "Portfolio Website",
